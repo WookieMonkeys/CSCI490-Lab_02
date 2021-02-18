@@ -3,6 +3,10 @@ Lab to demonstrate building blocks and Intents
 
 Instructions for Inclass Lab 02:
 
+# SUBMISSION DETAILS
+* part 1 can be found on branch lab_part_1 !
+* part 2 is on master
+* they diverge at the start of part 2
 ## Start Lab
 Open Android Studio and create a basic project. Name the project whatever you like, **IntentDemo** is a good candidate. Choose **API of your choice**. Next choose just an **Empty Activity**.
 
