@@ -1,4 +1,9 @@
 # CSCI490-Lab_02
+------------------------------------------
+`PART 1 is on branch lab_part_1` 
+`PART 2 is on master`
+------------------------------------------
+
 Lab to demonstrate building blocks and Intents
 
 Instructions for Inclass Lab 02:
