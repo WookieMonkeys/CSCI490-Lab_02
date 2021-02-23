@@ -2,24 +2,51 @@ package com.example.intentdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
-    TextView textView2;
+    ImageView supermoon;
+    ImageView waterfall;
+    private int imageID;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Intent i = getIntent();
-        String s = i.getExtras().getString("testString");
+        supermoon = findViewById(R.id.moon);
+        waterfall = findViewById(R.id.waterfall);
 
-        textView2 = findViewById(R.id.textView2);
+        supermoon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageID = R.drawable.supermoon;
+                finish();
+            }
+        });
 
-        textView2.setText(s);
+        waterfall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageID = R.drawable.waterfall;
+                finish();
+            }
+        });
+
+    }
+
+    @Override
+    public void finish(){
+        Intent intent = new Intent();
+        intent.putExtra("imageID",imageID);
+
+        setResult(RESULT_OK, intent);
+        super.finish();
+
     }
 }
